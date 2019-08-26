@@ -1,9 +1,10 @@
-const validator = require('validator');
 const chalk = require('chalk');
 const notes = require('./notes');
 
-console.log(notes());
+const command = process.argv[2];
 
-console.log(validator.isEmail("gmail.com"));
-console.log(validator.isURL("https/www.gmail.com"));
-console.log(chalk.green.bold("Success!"));
+if (command === "add") {
+    console.log('Adding note!');
+} else if (command === 'remove') {
+    console.log('Removing note!');
+}
